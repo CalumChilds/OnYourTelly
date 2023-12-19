@@ -1,0 +1,180 @@
+/* CSS Variables */
+:root {
+	--orange: #e6421f;
+	--red: #bc0001;
+	--blue: #00629f;
+	--purple: #675178;
+	--dark-grey: #111111;
+	--pastel-orange: #f5b3a5;
+	--pastel-blue: #b3d0e2;
+}
+
+body, input, select {
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	background-color: var(--dark-grey);
+	color: white;
+}
+p {
+	color: #999999;
+}
+body {
+	min-height: 100vh;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Barlow Condensed', sans-serif;
+}
+h1,h2 {
+	font-weight: 700;
+}
+h1 {
+	font-size: 60px;
+}
+@media screen and (max-width: 800px) {
+	h1 {
+		font-size: 40px;
+	}
+}
+h1.main-heading {
+	text-align: center;
+	padding-top: 5%;
+}
+h2 {
+	font-size: 32px;
+}
+h2.secondary-heading {
+	color: #777777;
+	text-align: center;
+}
+h3,h4,h5,h6 {
+	font-weight: 400;
+}
+a,a:hover {
+	color: #e6421f;
+}
+a:focus {
+	background-color: var(--orange);
+	color: white;
+}
+a:hover {
+	text-decoration: underline;
+}
+/* .search-bar input, .search-bar select, .search-bar .button {
+	height: 45px;
+} */
+.search-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.search-bar input, .search-bar input:focus {
+	border-color: white;
+	border-style: solid;
+	max-width: auto;
+	width: auto;
+	margin-right: 5px;
+	background-color: transparent;
+	color: white;
+}
+.search-bar .select {
+	background-color: transparent;
+	color: white;
+}
+.search-bar #submit-show, .search-bar .button.is-large {
+	margin-left: 5px;
+}
+@media screen and (max-width: 800px) {
+	.search-bar {
+		display: block;
+	}
+	.search-bar input, .search-bar .button, .search-bar select {
+		width: 95%;
+		margin-top: 5px;
+	}
+}
+.select::after, .select select:focus, a.button:focus {
+	border-color: #e6421f !important;
+}
+.is-gender-Male::before, .is-gender-male::before {
+	content: '\f183';
+	font-family: 'Font Awesome 6 Free';
+	font-weight: 900;
+	margin-right: 5px;
+}
+.is-gender-Female::before, .is-gender-female::before {
+	content: '\f182';
+	font-family: 'Font Awesome 6 Free';
+	font-weight: 900;
+	margin-right: 5px;
+}
+.is-gender-Null::before, .is-gender-null::before {
+	content: '\3f';
+	font-family: 'Font Awesome 6 Free';
+	font-weight: 900;
+	margin-right: 5px;
+}
+.is-orange {
+	background-color: #e6421f;
+	border-color: #e6421f;
+	color: white;
+	transition: all 0.6s ease 0s;
+	border-width: 2px;
+	border-radius: 8px;
+}
+.is-orange:hover {
+	background-color: transparent;
+	color: var(--pastel-orange);
+	border-color: var(--pastel-orange);
+	transition: all 0.6s ease 0s;
+}
+.is-blue {
+	background-color: #00629f;
+	border-color: #00629f;
+	color: white;
+	transition: all 0.6s ease 0s;
+	border-width: 2px;
+	border-radius: 8px;
+}
+.is-blue:hover {
+	background-color: transparent;
+	color: var(--pastel-blue);
+	border-color: var(--pastel-blue);
+	transition: all 0.6s ease 0s;
+}
+/* Button width */
+@media screen and (max-width: 769px) {
+	.button, select, input {
+		width: 95%;
+		display: block;
+	}
+}
+/* Navbar */
+.navbar, .navbar-menu {
+	background-color: var(--dark-grey);
+}
+.navbar-menu a, .navbar-burger {
+	color: white;
+	transition: all 0.6s ease 0s;
+}
+.oyt-active {
+	background-color: var(--purple);
+	color: white;
+	transition: all 0.6s ease 0s;
+}
+a.navbar-item:hover, .navbar-burger:hover, .navbar-brand:hover {
+	background-color: var(--orange);
+	transition: all 0.6s ease 0s;
+	color: white;
+	text-decoration: none;
+}
+a.navbar-item:focus, .navbar-burger:focus, .navbar-brand:focus {
+	background-color: var(--red);
+	color: white;
+	font-weight: 700;
+	text-decoration: underline;
+	transition:  all 0.6s ease 0s;
+}
+/* Responsive navbar */
+.responsive {
+	display: block;
+}

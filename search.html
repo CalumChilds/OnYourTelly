@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search TV Shows &amp; People - On Your Telly</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="./css/style.css" type="text/css">
+	<link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
+	<script src="./js/script.js" type="text/javascript"></script>
+	<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//www.calumchilds.com/stats/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+</head>
+<body>
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+	<a class="navbar-item" href="https://calumchilds.com/onyourtelly">
+	  <img src="https://calumchilds.com/onyourtelly/imgs/on-your-telly-logo.png" width="200" alt="On Your Telly">
+	</a>
+	<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" onclick="openNavBar()" id="navbarBurger">
+	  <span aria-hidden="true"></span>
+	  <span aria-hidden="true"></span>
+	  <span aria-hidden="true"></span>
+	</a>
+	</div>
+	<div class="navbar-menu" id="navigationBar">
+	<div class="navbar-start">
+	  <a class="navbar-item oyt-active" href="search.html">
+	    Search
+	  </a>
+	  <a class="navbar-item" href="schedule.html">
+	  	Schedule
+	  </a>
+	  <a class="navbar-item" href="faq.html">
+	    FAQ
+	  </a>
+	</div>
+	</div>
+	</nav>
+	<h1 class="main-heading">Find your favourite TV shows and actors.</h1>
+	<div class="search-bar">
+		<input type="text" id="query" onkeyup="chooseFunction()" class="input is-large">
+		<div class="select is-large">
+			<select id="option">
+				<option value="0">TV Shows</option>
+				<option value="1">People</option>
+			</select>
+		</div>
+		<input type="submit" onclick="chooseFunction()" value="Get Results" id="submit-show" class="button is-large">
+	</div>
+	<a href="schedule.html"><h2 align="center" style="font-family:'Inter';">Or get the TV schedule for your country instead.</h2></a>
+	<ul id="results" class="columns is-centered">
+	</ul>
+	<div id="more-results">
+	</div>
+</body>
+</html>
